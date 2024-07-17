@@ -1,4 +1,5 @@
 import express from "express";
+import path from "path";
 const app = express();
 
 import { logger } from "./src/config/logger.js";
