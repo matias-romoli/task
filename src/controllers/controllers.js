@@ -4,8 +4,15 @@ const contain = new Contenedor(db);
 
 export const controllers = {
   list: async (req, res) => {
+  let data = []; 
+  let tasks = await contain.list();
     try {
-      const data = await contain.list();
+      if (!Array.isArray(tasks)) {
+        tasks = [tasks];
+      }
+
+      data = tasks;
+
       return await res.status(200).json(data);
     } catch (error) {
       throw new Error(500, "It was not possible to list the tasks", error);
