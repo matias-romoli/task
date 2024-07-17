@@ -1,5 +1,5 @@
 export async function registerTask(task) {
-  const URI = "http://localhost:8000/new";
+  const URI = "https://task-33mb.onrender.com/new";
 
   try {
     const response = await fetch(URI, {
@@ -16,7 +16,7 @@ export async function registerTask(task) {
   }
 }
 export async function deleteTask(id) {
-  const URI = `http://localhost:8000/delete/${id}`;
+  const URI = `https://task-33mb.onrender.com/delete/${id}`;
 
   try {
     const response = await fetch(URI, {
@@ -29,7 +29,7 @@ export async function deleteTask(id) {
   }
 }
 export async function listTaskAll() {
-  const URI = "http://localhost:8000/list";
+  const URI = "https://task-33mb.onrender.com/list";
 
   try {
     const response = await fetch(URI, {
