@@ -6,7 +6,7 @@ export const controllers = {
   list: async (req, res) => {
     try {
       const data = await contain.list();
-      return await res.status(200).json(JSON.stringify(data));
+      return await res.status(200).json(data);
     } catch (error) {
       throw new Error(500, "It was not possible to list the tasks", error);
     }
